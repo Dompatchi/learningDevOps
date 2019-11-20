@@ -1,0 +1,29 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'ch.noser'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compile "org.postgresql:postgresql:42.2.6"
+	testImplementation "org.assertj:assertj-core:3.13.2"
+	testImplementation "com.h2database:hs:1.4.199"
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
