@@ -35,7 +35,7 @@ sonarqube {
 docker {
     name "dompatchi/learning-devops"
     tags "latest"
-    dockerfile file('dockerfile')
+    dockerfile file('Dockerfile')
     files war.archiveFile
     pull true
     noCache true
