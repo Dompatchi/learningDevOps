@@ -9,6 +9,6 @@ class HelloWorldControllerTest {
 
     @Test
     void helloWorld() {
-        assertThat(1).isEqualTo(1);
+        assertThat(2).isEqualTo(2);
     }
 }
